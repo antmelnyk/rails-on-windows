@@ -1,2 +1,4 @@
 # rails-on-windows
-Vagrant box configuration for modern Ruby on Rails
+Конфігурація Vagrant бокса для сучасних Ruby on Rails
+
+https://codeguida.com/post/1265

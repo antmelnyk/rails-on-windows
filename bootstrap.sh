@@ -27,10 +27,6 @@ install "пакетний менеджер NPM для JavaScript" npm
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - > /dev/null 2>&1
 install nodeJS nodejs
 
-sudo apt remove cmdtest -y > /dev/null 2>&1
-echo "Інсталюємо менеджер залежностей Yarn"
-sudo apt-get install -y --no-install-recommends yarn > /dev/null 2>&1
-
 rvm group add rvm $USER > /dev/null 2>&1
 sudo chmod -R 777 /usr/share/rvm > /dev/null 2>&1
 sudo chmod -R 777 /usr/lib/node_modules > /dev/null 2>&1
@@ -42,3 +38,11 @@ ruby -v
 echo "Інсталюємо Ruby on Rails"
 gem install rails --no-ri --no-rdoc
 rails -v
+
+echo "Інсталюємо менеджер залежностей Yarn"
+sudo apt remove cmdtest -y #> /dev/null 2>&1
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - > /dev/null 2>&1
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list > /dev/null 2>&1
+sudo apt-get update && sudo apt-get install -y --no-install-recommends yarn > /dev/null 2>&1
+
+sudo apt autoremove -y > /dev/null 2>&1
