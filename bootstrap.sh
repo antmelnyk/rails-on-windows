@@ -40,5 +40,5 @@ rvm install 2.5.0 > /dev/null 2>&1
 ruby -v
 
 echo "Інсталюємо Ruby on Rails"
-gem install rails
+gem install rails --no-ri --no-rdoc
 rails -v
