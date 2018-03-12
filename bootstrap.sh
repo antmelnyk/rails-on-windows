@@ -27,8 +27,7 @@ install "пакетний менеджер NPM для JavaScript" npm
 curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - > /dev/null 2>&1
 install nodeJS nodejs
 
-sudo apt remove cmdtest > /dev/null 2>&1
-sudo apt remove yarn > /dev/null 2>&1
+sudo apt remove cmdtest -y > /dev/null 2>&1
 echo "Інсталюємо менеджер залежностей Yarn"
 sudo apt-get install -y --no-install-recommends yarn > /dev/null 2>&1
 
