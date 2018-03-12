@@ -35,8 +35,9 @@ sudo apt-get install -y --no-install-recommends yarn > /dev/null 2>&1
 rvm group add rvm $USER > /dev/null 2>&1
 sudo chmod -R 777 /usr/share/rvm > /dev/null 2>&1
 sudo chmod -R 777 /usr/lib/node_modules > /dev/null 2>&1
+
 echo "Інсталюємо Ruby 2.5.0. Його компіляція може зайняти деякий час..."
-rvm install 2.5.0 > /dev/null 2>&1
+rvm install 2.5.0
 ruby -v
 
 echo "Інсталюємо Ruby on Rails"
