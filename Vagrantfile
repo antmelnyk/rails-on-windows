@@ -9,6 +9,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "forwarded_port", guest: 3000, host: 3000
 
-  config.vm.synced_folder '.', '/home/vagrant/workspace'
+  config.vm.synced_folder '.', '/home/vagrant/workspace', type: "smb", mount_options: ["vers=3.02","mfsymlinks"]
 
 end

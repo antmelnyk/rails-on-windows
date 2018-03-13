@@ -7,6 +7,9 @@ function install {
 
 echo 'Vagrant успішно залогінився до віртуальної системи.'
 echo 'Починаємо встановлення оточення Ruby on Rails'
+
+sudo update-locale LANG=en_US.UTF-8 LANGUAGE=en.UTF-8
+
 echo 'Оновлюємо інформацію про apt пакети в репозиторіях'
 sudo apt-get update > /dev/null 2>&1
 
